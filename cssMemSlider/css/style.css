@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:dimgray;
+}
+
+.slider {
+  width: 60%;
+  height: 700px;
+  margin: 10% auto;
+  background-color: #222327;
+  overflow: hidden;
+}
+
+.slider-control {
+  margin-left: 80%;
+  display: flex;
+}
+
+
+.button {
+  height: 1em;
+  width: 1em;
+  margin-right: 10%;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #000080;
+}
+
+.button:hover {
+  background-color: #FFFFFF;
+}
+
+.slides {
+  width: 320%;
+  height: 90%;
+  display: flex;
+  padding: 5%;
+}
+
+.slide {
+  width: 25%;
+  transition: all 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  margin-right: 5%;
+}
+
+input[name="radio-button"] {
+  visibility: hidden;
+
+}
+
+#radio1:checked ~ .active {
+  margin-left: 0;
+}
+#radio2:checked ~ .active {
+  margin-left: -25%;
+}
+#radio3:checked ~ .active {
+  margin-left: -50%;
+}
+#radio4:checked ~ .active {
+  margin-left: -75%;
+}
