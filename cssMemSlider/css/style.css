@@ -172,8 +172,12 @@ input[name="radio-button"] {
   #radio3:checked ~ .bars label:nth-child(3):hover,
   #radio4:checked ~ .bars label:nth-child(4):hover {
   border: 0.1em solid #F0DD0A;
-} 
-
+  } 
+  .button::after{
+    content:'';
+    height: 1.5em;
+    width: 1.5em;
+  } 
 }
 
 @media (max-width: 320px) {
