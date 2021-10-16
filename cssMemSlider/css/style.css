@@ -69,6 +69,11 @@ body {
   background-color: #F0DD0A;
 }
 
+.button:active,
+.button > .button:hover:active {
+  transform: translate(0.1em, 0.1em);
+}
+
 .slides {
   width: 400%;
   height: 100%;
@@ -124,6 +129,14 @@ input[name="radio-button"] {
   background: #FFFFFF;
 } 
 
+#radio1:checked ~ .bars label:nth-child(1):hover,
+#radio2:checked ~ .bars label:nth-child(2):hover,
+#radio3:checked ~ .bars label:nth-child(3):hover,
+#radio4:checked ~ .bars label:nth-child(4):hover {
+  border: 0.2em solid #F0DD0A;
+} 
+
+
 @media (max-width: 1181px) {
   .bars {
     margin-top: -10.7%;
@@ -143,16 +156,41 @@ input[name="radio-button"] {
   .text {
     font-size: 1.2em;
     text-align: center;
-    margin-top: 12%;
-    margin-bottom: 5%;
+    margin: 12% 0 16%;
   }
   .bars {
     position: relative;
-    bottom: 2.7em;
     left: 4em;
+    bottom: 4.7em;
   }
   .button {
       height: 0.7em;
       width: 0.7em;
+  }
+  #radio1:checked ~ .bars label:nth-child(1):hover,
+  #radio2:checked ~ .bars label:nth-child(2):hover,
+  #radio3:checked ~ .bars label:nth-child(3):hover,
+  #radio4:checked ~ .bars label:nth-child(4):hover {
+  border: 0.1em solid #F0DD0A;
+} 
+
+}
+
+@media (max-width: 320px) {
+  .slider {
+    width: 85%;
+  }
+  .text {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .bars {
+    position: relative;
+    left: 13%;
+    bottom: 3.2em;
+  }
+  .button {
+      height: 0.5em;
+      width: 0.5em;
   }
 }
